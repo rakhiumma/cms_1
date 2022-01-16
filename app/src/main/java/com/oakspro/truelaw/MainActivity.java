@@ -2,6 +2,7 @@ package com.oakspro.truelaw;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.animation.Animation;
@@ -36,9 +37,20 @@ public class MainActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                animationText("A True Platform For Law");
+                animationText("True Lawyers in Action");
             }
         },3000);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                //add if logic for sharedPref set or not
+
+                Intent intent=new Intent(MainActivity.this, FstActivity.class);
+                startActivity(intent);
+            }
+        }, 7000);
 
     }
     Runnable runnable=new Runnable() {
