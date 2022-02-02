@@ -2,4 +2,17 @@
     <string name="app_name">TrueLaw</string>
     <string name="service_1">Service details and explanation  nasbdkf jasfnisf sjfksjdf sjdfsd fsdjfnsjdf skjdfksd skjdf  sdbfkjsd sdfosndf jsdnf sndfjsdf </string>
     <string name="service_2">Service details and explanation  nasbdkf jasfnisf sjfksjdf sjdfsd fsdjfnsjdf skjdfksd skjdf  sdbfkjsd sdfosndf jsdnf sndfjsdf </string>
+    <string name="title_activity_dash">DashActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_service">Service</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_discussions">Discussions</string>
+    <string name="title_more">More</string>
+    <string name="title_terms">Terms and Conditions</string>
+    <string name="start">Start</string>
+    <string name="close">Close</string>
+
 </resources>

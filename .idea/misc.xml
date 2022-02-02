@@ -3,16 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/drawable/card_bg.xml" value="0.18" />
         <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/drawable/round_base.xml" value="0.2203125" />
+        <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_dash.xml" value="0.22" />
         <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_fst.xml" value="0.25" />
         <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_sign.xml" value="0.33" />
         <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/layout/drawer_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/OAKSPRO CEO/AndroidStudioProjects/cms_1/app/src/main/res/menu/navigation_drawer_menu.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/TrueLaw/app/src/main/res/layout/activity_main.xml" value="0.264" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

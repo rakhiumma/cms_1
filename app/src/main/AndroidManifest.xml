@@ -10,20 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrueLaw">
         <activity
+            android:name=".DashActivity"
+            android:exported="false"
+            android:label="@string/title_activity_dash"
+            android:theme="@style/Theme.TrueLawAction"/>
+        <activity
             android:name=".FstActivity"
             android:exported="false"
-            android:theme="@style/Theme.TrueLawWhite"/>
+            android:theme="@style/Theme.TrueLawWhite" />
         <activity
             android:name=".OtpActivity"
             android:exported="false" />
         <activity
             android:name=".SignupActivity"
             android:exported="false"
-            android:theme="@style/Theme.TrueLawMaterial"/>
+            android:theme="@style/Theme.TrueLawMaterial" />
         <activity
             android:name=".SignActivity"
             android:exported="false"
-            android:theme="@style/Theme.TrueLawWhite"/>
+            android:theme="@style/Theme.TrueLawWhite" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
