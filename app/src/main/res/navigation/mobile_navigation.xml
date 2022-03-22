@@ -22,4 +22,11 @@
         android:name="com.oakspro.truelaw.ui.service.NotificationsFragment"
         android:label="@string/title_service"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.oakspro.truelaw.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile"
+        />
+
 </navigation>
