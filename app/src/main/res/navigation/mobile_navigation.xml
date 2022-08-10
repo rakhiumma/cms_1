@@ -19,9 +19,9 @@
 
     <fragment
         android:id="@+id/navigation_service"
-        android:name="com.oakspro.truelaw.ui.service.NotificationsFragment"
+        android:name="com.oakspro.truelaw.ui.service.ServiceFragment"
         android:label="@string/title_service"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_service" />
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.oakspro.truelaw.ui.profile.ProfileFragment"

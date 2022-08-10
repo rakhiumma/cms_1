@@ -12,10 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TrueLaw">
         <activity
+            android:name=".CkycActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrueLawMaterial"/>
+        <activity
             android:name=".DashActivity"
             android:exported="false"
             android:label="@string/title_activity_dash"
-            android:theme="@style/Theme.TrueLawAction"/>
+            android:theme="@style/Theme.TrueLawAction" />
         <activity
             android:name=".FstActivity"
             android:exported="false"
