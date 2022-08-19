@@ -18,8 +18,8 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.navigation.NavigationView;
 import com.oakspro.truelaw.databinding.ActivityDashBinding;
 
-public class DashActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+public class DashActivity extends AppCompatActivity  {
+        //implements NavigationView.OnNavigationItemSelectedListener
     private ActivityDashBinding binding;
 
     private DrawerLayout drawerLayout;
@@ -31,49 +31,51 @@ public class DashActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
 
         binding = ActivityDashBinding.inflate(getLayoutInflater());
-        setTitle(getResources().getString(R.string.app_name));
         setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
-        drawerLayout=findViewById(R.id.drawerLayout);
-        navigationView=findViewById(R.id.navigation_view);
-
-        toggle=new ActionBarDrawerToggle(this, drawerLayout, R.string.start, R.string.close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        navigationView.setNavigationItemSelectedListener(this);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-
+//        drawerLayout=findViewById(R.id.drawerLayout);
+//        navigationView=findViewById(R.id.navigation_view);
+//
+//        toggle=new ActionBarDrawerToggle(this, drawerLayout, R.string.start, R.string.close);
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        navigationView.setNavigationItemSelectedListener(this);
+//        Passing each menu ID as a set of Ids because each
+//        menu should be considered as top level destinations.
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_feed,R.id.navigation_service, R.id.navigation_profile)
+                .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_dash);
        // NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (toggle.onOptionsItemSelected(item)){
-            return true;
-        }
-        return true;
-    }
 
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//        if (toggle.onOptionsItemSelected(item)){
+//            return true;
+//        }
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//
+//        switch (item.getItemId()){
+//            case R.id.navigation_discussion:
+//                Toast.makeText(this, "Discussion", Toast.LENGTH_SHORT).show();
+//                break;
+//            case R.id.navigation_more:
+//                Toast.makeText(this, "More", Toast.LENGTH_SHORT).show();
+//                break;
+//        }
+//
+//        return true;
+//    }
 
-        switch (item.getItemId()){
-            case R.id.navigation_discussion:
-                Toast.makeText(this, "Discussion", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.navigation_more:
-                Toast.makeText(this, "More", Toast.LENGTH_SHORT).show();
-                break;
-        }
-
-        return true;
-    }
 }

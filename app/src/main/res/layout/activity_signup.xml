@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="300dp"
-        android:layout_height="250dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:src="@drawable/security" />
@@ -21,11 +21,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/img"
-        android:text="Login to get Started!"
+        android:text="Register to get Started!"
         android:textAlignment="center"
         android:textColor="@color/base_color"
         android:textSize="25dp" />
+
     <LinearLayout
+        android:id="@+id/ll2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -40,6 +42,24 @@
             android:id="@+id/filed_title"
             />
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mobile_tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Mobile"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:enabled="false"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/sur_tl"
             android:layout_width="match_parent"
@@ -148,92 +168,43 @@
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.chip.ChipGroup
-            android:id="@+id/law_chip"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/createp_tl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Create Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:visibility="gone">
 
-            <com.google.android.material.chip.Chip
-                android:id="@+id/f_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Family Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/cr_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Criminal Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/c_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Civil Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/com_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Common Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/st_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Statutory Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/corp_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Corporate Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/comm_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Commercial Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/int_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="International Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/lb_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Labor Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/const_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Constitutional Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/intell_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Intellectual Property Law"/>
-            <com.google.android.material.chip.Chip
-                android:id="@+id/all_1"
-                style="@style/Widget.MaterialComponents.Chip.Choice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:checked="true"
-                android:text="All the above"/>
+                android:inputType="textEmailAddress"
+                />
 
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/confirmp_tl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:hint="Confirm Password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:visibility="gone">
 
-        </com.google.android.material.chip.ChipGroup>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <ProgressBar
             android:layout_width="100dp"
             android:layout_height="100dp"

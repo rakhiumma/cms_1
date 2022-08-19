@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -21,6 +22,7 @@ public class SignActivity extends AppCompatActivity {
     EditText mobileEd, otpEd;
     Button contBtn;
     Boolean j=false;
+    String mob=null;
 
 
 
@@ -39,6 +41,7 @@ public class SignActivity extends AppCompatActivity {
 
 
 
+
         contBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,7 +49,7 @@ public class SignActivity extends AppCompatActivity {
                     ll1.setVisibility(View.VISIBLE);
                     ll2.setVisibility(View.GONE);
 
-                    String mob=mobileEd.getText().toString();
+                    mob=mobileEd.getText().toString();
 
                     if (!TextUtils.isEmpty(mob)){
                         if (mob.length()==10){
@@ -74,7 +77,10 @@ public class SignActivity extends AppCompatActivity {
                         if (otp_s.length()==6){
                             if (otp_s.equals("123456")){
                                 Intent intent=new Intent(SignActivity.this, SignupActivity.class);
+                                intent.putExtra("mobile", mob);
                                 startActivity(intent);
+                            }else{
+                                Toast.makeText(SignActivity.this, "Invalid OTP", Toast.LENGTH_SHORT).show();
                             }
 
                         }else{
