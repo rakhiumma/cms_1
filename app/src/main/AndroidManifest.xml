@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.oakspro.truelaw" >
+    package="com.oakspro.truelaw">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,20 +10,26 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TrueLaw" >
+        android:theme="@style/Theme.TrueLaw">
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TrueLawMaterial"/>
         <activity
             android:name=".InterestActivity"
             android:exported="false"
-            android:theme="@style/Theme.TrueLawMaterial"/>
+            android:theme="@style/Theme.TrueLawMaterial" />
         <activity
             android:name=".CkycActivity"
             android:exported="false"
             android:theme="@style/Theme.TrueLawMaterial" />
         <activity
             android:name=".DashActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_dash"
-            android:theme="@style/Theme.TrueLaw" />
+            android:theme="@style/Theme.TrueLaw">
+
+        </activity>
         <activity
             android:name=".FstActivity"
             android:exported="false"
@@ -38,7 +44,7 @@
             android:theme="@style/Theme.TrueLawWhite" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

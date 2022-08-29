@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -32,8 +33,10 @@ import java.util.Map;
 public class InterestActivity extends AppCompatActivity {
 
     ChipGroup chipGroup;
-    String topics[]={"Family Law","Criminal Law","Corporate Law","Intellectual Property Law"};
+    String[] topics={"Family Law","Criminal Law","Corporate Law","Intellectual Property Law"};
     Button finishbtn;
+    String login_token=null;
+    TextView skiptxt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +44,8 @@ public class InterestActivity extends AppCompatActivity {
 
         chipGroup=findViewById(R.id.law_chip);
         finishbtn=findViewById(R.id.finish_btn);
+        login_token=getIntent().getStringExtra("token");
+        skiptxt=findViewById(R.id.skip_txt);
 
         List<String> list=new ArrayList<String>(Arrays.asList(topics));
         chipGroup.setOnCheckedChangeListener(new ChipGroup.OnCheckedChangeListener() {
@@ -61,6 +66,14 @@ public class InterestActivity extends AppCompatActivity {
                 String tst=String.valueOf(topics);
                 Log.i("Topics Selected",list.toString());
                 updateInterestedTopics(topics);
+                //startActivity(new Intent(InterestActivity.this, DashActivity.class));
+            }
+        });
+
+        skiptxt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(InterestActivity.this, DashActivity.class));
             }
         });
     }
@@ -75,6 +88,8 @@ public class InterestActivity extends AppCompatActivity {
                     if (status){
                         Toast.makeText(InterestActivity.this, "Topics Added", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(InterestActivity.this, DashActivity.class));
+                    }else{
+                        Toast.makeText(InterestActivity.this, "Topics Not Updated", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -83,18 +98,27 @@ public class InterestActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(InterestActivity.this, "Please check internet connection", Toast.LENGTH_SHORT).show();
             }
         }){
+            @Override
+            public Map<String, String> getHeaders(){
+                Map<String, String> params=new HashMap<String, String>();
+                params.put("SECURED_TRL_AUTH", login_token);
+                // params.put("Content-Type", "application/json"); //use this for PUT
+                return params;
+            }
             @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> data=new HashMap<>();
+                Map<String, String> params=new HashMap<>();
                 for (int i=0; i<topics.length; i++){
                     String str=topics[i];
-                    data.put("interests[]", str);
+                    String str1="interests["+i+"]";
+                    params.put(str1, str);
                 }
-                return data;
+                Log.i("interested", params.toString());
+                return params;
             }
         };
         RequestQueue requestQueue= Volley.newRequestQueue(this);

@@ -59,13 +59,15 @@
 
             <EditText
                 android:id="@+id/mobileEd"
+                android:background="#FFFFFF"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginRight="40dp"
                 android:gravity="center"
                 android:hint="+91"
+                android:textSize="22sp"
                 android:inputType="number"
                 android:maxLength="10"
                 android:textColor="@color/base_color_200" />
@@ -139,6 +141,17 @@
         android:text="continue"
         android:textColor="@color/white"
         android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/login_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cont_btn"
+        android:layout_marginTop="30dp"
+        android:text="Login with Password"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

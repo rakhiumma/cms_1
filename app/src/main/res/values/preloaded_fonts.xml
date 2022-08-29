@@ -2,6 +2,8 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/arimo_bold</item>
+        <item>@font/baloo_tamma</item>
+        <item>@font/dm_sans_medium</item>
         <item>@font/farro</item>
     </array>
 </resources>

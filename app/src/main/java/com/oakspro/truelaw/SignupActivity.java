@@ -199,7 +199,7 @@ public class SignupActivity extends AppCompatActivity {
                     boolean status=jsonObject.has("SUCCESS");
                     if (status){
                         Toast.makeText(SignupActivity.this, "Account Created Successfully", Toast.LENGTH_SHORT).show();
-                        Intent intent=new Intent(SignupActivity.this, InterestActivity.class);
+                        Intent intent=new Intent(SignupActivity.this, DashActivity.class);
                         startActivity(intent);
                     }else{
                         Toast.makeText(SignupActivity.this, "Failed to signup.! Please try later.", Toast.LENGTH_LONG).show();

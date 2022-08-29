@@ -18,12 +18,11 @@ import com.google.android.material.textfield.TextInputLayout;
 public class SignActivity extends AppCompatActivity {
 
     LinearLayout ll1, ll2;
-    TextView otpTxt, errorTxt, errorOTP;
+    TextView otpTxt, errorTxt, errorOTP, loginpass;
     EditText mobileEd, otpEd;
     Button contBtn;
     Boolean j=false;
     String mob=null;
-
 
 
     @Override
@@ -38,6 +37,7 @@ public class SignActivity extends AppCompatActivity {
         otpEd=findViewById(R.id.otpEd);
         contBtn=findViewById(R.id.cont_btn);
         errorTxt=findViewById(R.id.error_msg);
+        loginpass=findViewById(R.id.login_pass);
 
 
 
@@ -92,6 +92,13 @@ public class SignActivity extends AppCompatActivity {
 
 
                 }
+            }
+        });
+
+        loginpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignActivity.this, LoginActivity.class));
             }
         });
 

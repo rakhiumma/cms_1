@@ -20,15 +20,23 @@
         <entry key="..\:/Users/user1/AndroidStudioProjects/TrueLaw/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/drawable/button_bg_purple.xml" value="0.213" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/drawable/card_bg.xml" value="0.213" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/drawable/ic_baseline_feed_24.xml" value="0.211" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/drawable/service_bg_1.xml" value="0.211" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/drawable/upload_bg.xml" value="0.16799999999999998" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_ckyc.xml" value="0.264" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_dash.xml" value="0.264" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_fst.xml" value="0.25" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_interest.xml" value="0.264" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_login.xml" value="0.24583333333333332" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_main.xml" value="0.24583333333333332" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_otp.xml" value="0.1" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_sign.xml" value="0.25" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/fragment_service.xml" value="0.25" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/inservice_item.xml" value="0.24895833333333334" />
+        <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/layout/news_short_block.xml" value="0.4" />
         <entry key="..\:/Users/user1/AndroidStudioProjects/cms_1/app/src/main/res/menu/navigation_drawer_menu.xml" value="0.25" />
       </map>
     </option>

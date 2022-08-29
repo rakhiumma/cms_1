@@ -1,5 +1,6 @@
 package com.oakspro.truelaw.ui.home;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -20,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.oakspro.truelaw.CkycActivity;
 import com.oakspro.truelaw.R;
 import com.oakspro.truelaw.SliderImgAdapter;
 import com.oakspro.truelaw.SliderItem;
@@ -42,6 +45,7 @@ public class HomeFragment extends Fragment {
     ArrayList<SliderItem> adsArray=new ArrayList<>();
     SliderView adSlider;
     private String cat_api="https://truelaw.in/api/banners.php";
+    CardView cv1;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,6 +53,14 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
         adSlider=root.findViewById(R.id.ads_slider);
+        cv1=root.findViewById(R.id.cv_1);
+
+        cv1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), CkycActivity.class));
+            }
+        });
 
         getCategoriesFromServer();
 
